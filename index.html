@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nabeel Alsultan | Full-Stack & Embedded Systems Developer</title>
+<meta name="description" content="Full-stack and embedded systems developer. React, Node.js, ESP32, IoT. Available for freelance projects.">
+<meta property="og:title" content="Nabeel Alsultan | Full-Stack & Embedded Systems Developer">
+<meta property="og:description" content="Web apps and smart devices, from the screen to the circuit board.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDF0F4; --paper2:#E3E8EE; --ink:#0F1B2D; --mut:#586277; --line:#CBD3DE;
+  --cu:#B4631F; --cu-soft:#E9C9A8; --mask:#0F3D2E; --mask2:#14503D; --maskline:#2A6B55;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cu);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(237,240,244,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:700;text-decoration:none;font-size:1.05rem}
+.logo i{font-style:normal;color:var(--cu)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav ul a{text-decoration:none;color:var(--mut);font-size:.95rem;font-weight:500}
+nav ul a:hover{color:var(--ink)}
+.hire{background:var(--ink);color:var(--paper)!important;padding:8px 16px;border-radius:999px}
+.hero{padding:72px 0 64px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+h1{font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.04;letter-spacing:-.03em;font-weight:700;font-variation-settings:"opsz" 96}
+.lead{margin-top:22px;max-width:520px;color:var(--mut);font-size:1.12rem}
+.cta{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;border:1.5px solid var(--ink);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.fill{background:var(--ink);color:var(--paper)}
+.facts{margin-top:40px;display:flex;gap:34px;flex-wrap:wrap;color:var(--mut);font-size:.95rem}
+.facts b{display:block;color:var(--ink);font-size:1.02rem}
+.robot{position:relative;display:flex;justify-content:center}
+.robot svg{width:min(380px,100%);height:auto;overflow:visible}
+.robot-cap{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);font-size:.85rem;color:var(--mut);white-space:nowrap}
+.pcb-bg{position:absolute;inset:0;z-index:-1;opacity:.55;pointer-events:none}
+section{padding:84px 0}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.1;letter-spacing:-.02em;font-weight:700;max-width:640px}
+.sub{color:var(--mut);max-width:560px;margin-top:14px;font-size:1.05rem}
+.sandy{background:var(--mask);color:#EAF4EF;position:relative}
+.sandy h2{color:#fff}
+.sandy .sub{color:#A9C9BC}
+.sandy-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:44px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.badge{border:1px solid var(--maskline);color:#BFDACE;border-radius:999px;padding:4px 13px;font-size:.84rem}
+.arch{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:stretch}
+.diagram{background:var(--mask2);border:1px solid var(--maskline);border-radius:var(--r);padding:12px}
+.diagram svg{width:100%;height:auto;display:block}
+.node{cursor:pointer}
+.node rect{fill:#0B3025;stroke:var(--maskline);stroke-width:1.5;transition:fill .2s,stroke .2s}
+.node text{fill:#D8EBE2;font:600 13px "Bricolage Grotesque",sans-serif;pointer-events:none}
+.node:hover rect,.node:focus rect,.node.on rect{fill:#124A39;stroke:var(--cu-soft)}
+.node.on text{fill:#fff}
+.wire{stroke:var(--maskline);stroke-width:2;fill:none}
+.flow{stroke:var(--cu-soft);stroke-width:2.5;fill:none;stroke-dasharray:4 14;animation:dash 1.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-36}}
+.detail{background:#0B3025;border:1px solid var(--maskline);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px}
+.detail h3{font-size:1.25rem;color:#fff}
+.detail p{color:#B5D3C6}
+.detail small{color:#7FAE9C;margin-top:auto}
+.points{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px}
+.points h3{font-size:1.02rem;color:#fff;margin-bottom:6px}
+.points p{color:#A9C9BC;font-size:.96rem}
+.slot{margin-top:44px;border:1.5px dashed var(--maskline);border-radius:var(--r);padding:34px;text-align:center;color:#7FAE9C}
+.link-light{color:var(--cu-soft);font-weight:600}
+.wisal .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;margin-top:40px;align-items:center}
+.mock{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(15,27,45,.35)}
+.mock-bar{display:flex;gap:6px;padding:10px 14px;background:var(--paper2);border-bottom:1px solid var(--line)}
+.mock-bar i{width:10px;height:10px;border-radius:50%;background:#C3CBD8}
+.mock-body{padding:20px;display:grid;grid-template-columns:90px 1fr;gap:18px;min-height:250px}
+.mock-side{display:flex;flex-direction:column;gap:10px}
+.mock-side b{height:10px;border-radius:5px;background:var(--paper2);display:block}
+.mock-side b:first-child{background:var(--cu-soft)}
+.mock-main{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-content:start}
+.mock-main span{height:56px;border-radius:10px;background:var(--paper)}
+.mock-main span.w{grid-column:1/-1;height:110px}
+.mock-note{padding:10px 20px 16px;color:var(--mut);font-size:.86rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 13px;font-size:.86rem;color:var(--mut)}
+.wisal p.body{margin-top:16px;color:var(--mut)}
+.role{margin-top:20px;padding-left:16px;border-left:3px solid var(--cu)}
+.role b{display:block}
+.stack{background:var(--paper2)}
+.cols{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:34px}
+.cols h3{font-size:1.02rem;margin-bottom:10px}
+.cols ul{list-style:none;color:var(--mut)}
+.cols li{padding:6px 0;border-top:1px solid var(--line)}
+.rail{margin-top:40px;position:relative;padding-left:30px}
+.rail::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.step{position:relative;padding-bottom:34px}
+.step::before{content:"";position:absolute;left:-30px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--cu)}
+.step time{color:var(--mut);font-size:.9rem}
+.step h3{font-size:1.15rem;margin:2px 0 6px}
+.step p{color:var(--mut);max-width:640px}
+.contact{background:var(--ink);color:var(--paper)}
+.contact h2{color:#fff;max-width:720px}
+.contact .sub{color:#A7B2C6}
+.contact .btn{border-color:var(--paper)}
+.contact .btn.fill{background:var(--cu);border-color:var(--cu);color:#fff}
+footer{padding:26px 0;color:var(--mut);font-size:.9rem;background:var(--paper)}
+@media(max-width:860px){
+  .hero .wrap,.sandy-top,.arch,.wisal .grid{grid-template-columns:1fr}
+  .badges{justify-content:flex-start}
+  nav ul li:not(:last-child){display:none}
+  .robot{order:-1}
+  section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Nabeel<i>.</i>Alsultan</a>
+  <ul>
+    <li><a href="#sandy">Sandy</a></li>
+    <li><a href="#wisal">Wisal</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#path">Path</a></li>
+    <li><a class="hire" href="#contact">Work with me</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top">
+  <svg class="pcb-bg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#CBD3DE" stroke-width="2">
+      <path d="M0 120H260L320 60H620"/><path d="M0 300H180L240 360H520L580 300H900"/>
+      <path d="M1200 80H980L920 140H760"/><path d="M1200 460H940L880 520H560"/><path d="M0 520H220L280 460H400"/>
+    </g>
+    <g fill="#EDF0F4" stroke="#CBD3DE" stroke-width="2">
+      <circle cx="620" cy="60" r="7"/><circle cx="900" cy="300" r="7"/><circle cx="760" cy="140" r="7"/><circle cx="560" cy="520" r="7"/><circle cx="400" cy="460" r="7"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <h1>I build web apps and smart devices, from the screen to the circuit board.</h1>
+      <p class="lead">Full-stack and embedded systems developer. I take an idea from a React interface through the backend to firmware running on an ESP32, and ship it working.</p>
+      <div class="cta">
+        <a class="btn fill" href="#sandy">See Sandy, my robot</a>
+        <a class="btn" href="#contact">Start a project</a>
+      </div>
+      <div class="facts">
+        <div><b>B.Sc. Information Technology</b>Islamic University of Gaza, 2026</div>
+        <div><b>Based in Egypt</b>Working remotely</div>
+      </div>
+    </div>
+    <div class="robot">
+      <svg id="face" viewBox="0 0 380 340" role="img" aria-label="Sandy, my voice assistant robot. Its eyes follow your cursor.">
+        <rect x="20" y="30" width="340" height="280" rx="58" fill="#0F1B2D"/>
+        <rect x="44" y="54" width="292" height="232" rx="40" fill="#16263E"/>
+        <line x1="190" y1="30" x2="190" y2="6" stroke="#0F1B2D" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="190" cy="6" r="8" fill="#B4631F"/>
+        <g id="eyeL" transform="translate(120 150)"><ellipse class="eye" rx="34" ry="40" fill="#F2E6D8"/><circle class="pupil" r="14" fill="#0F1B2D"/></g>
+        <g id="eyeR" transform="translate(260 150)"><ellipse class="eye" rx="34" ry="40" fill="#F2E6D8"/><circle class="pupil" r="14" fill="#0F1B2D"/></g>
+        <path id="mouth" d="M150 238 Q190 262 230 238" fill="none" stroke="#B4631F" stroke-width="7" stroke-linecap="round"/>
+        <rect x="6" y="140" width="14" height="60" rx="7" fill="#B4631F"/><rect x="360" y="140" width="14" height="60" rx="7" fill="#B4631F"/>
+      </svg>
+      <div class="robot-cap">Move your cursor. Sandy is watching.</div>
+    </div>
+  </div>
+</header>
+
+<section class="sandy" id="sandy">
+  <div class="wrap">
+    <div class="sandy-top">
+      <div>
+        <h2>Sandy: a voice assistant you can put on a desk.</h2>
+        <p class="sub">A desktop robot with a microphone, speaker, display and servo, plus an iPhone app. Both talk to one backend and share one memory.</p>
+      </div>
+      <div class="badges">
+        <span class="badge">Feb 2026 – present</span><span class="badge">Python</span><span class="badge">Flask</span><span class="badge">ESP-IDF (C)</span><span class="badge">SwiftUI</span><span class="badge">MQTT</span><span class="badge">MongoDB</span><span class="badge">Heroku</span>
+      </div>
+    </div>
+
+    <div class="arch">
+      <div class="diagram">
+        <svg viewBox="0 0 640 400" role="group" aria-label="Sandy architecture diagram. Select a block to read about it.">
+          <path class="wire" d="M150 70 V120 H320 V150"/>
+          <path class="wire" d="M490 70 V120 H320"/>
+          <path class="wire" d="M320 214 V260 H150 V300"/>
+          <path class="wire" d="M320 214 V260 H320 V300"/>
+          <path class="wire" d="M320 214 V260 H490 V300"/>
+          <path class="flow" d="M150 70 V120 H320 V150"/>
+          <path class="flow" d="M490 70 V120 H320 V150" style="animation-delay:-.6s"/>
+          <path class="flow" d="M320 214 V260 H150 V300" style="animation-delay:-.3s"/>
+          <path class="flow" d="M320 214 V260 H320 V300" style="animation-delay:-.9s"/>
+          <path class="flow" d="M320 214 V260 H490 V300" style="animation-delay:-1.2s"/>
+          <g class="node on" data-k="robot" tabindex="0" role="button"><rect x="50" y="16" width="200" height="54" rx="12"/><text x="150" y="48" text-anchor="middle">ESP32-S3 robot</text></g>
+          <g class="node" data-k="app" tabindex="0" role="button"><rect x="390" y="16" width="200" height="54" rx="12"/><text x="490" y="48" text-anchor="middle">iPhone app (SwiftUI)</text></g>
+          <g class="node" data-k="backend" tabindex="0" role="button"><rect x="210" y="150" width="220" height="64" rx="12"/><text x="320" y="187" text-anchor="middle">Flask backend + agent loop</text></g>
+          <g class="node" data-k="gemini" tabindex="0" role="button"><rect x="50" y="300" width="200" height="54" rx="12"/><text x="150" y="332" text-anchor="middle">Gemini Live (voice)</text></g>
+          <g class="node" data-k="azure" tabindex="0" role="button"><rect x="270" y="300" width="100" height="54" rx="12"/><text x="320" y="332" text-anchor="middle">Azure OpenAI</text></g>
+          <g class="node" data-k="mongo" tabindex="0" role="button"><rect x="400" y="300" width="190" height="54" rx="12"/><text x="495" y="332" text-anchor="middle">MongoDB + MQTT</text></g>
+        </svg>
+      </div>
+      <div class="detail" aria-live="polite">
+        <h3 id="d-title">ESP32-S3 robot</h3>
+        <p id="d-text">The body. It listens through a microphone and streams live audio to the backend over an authenticated WebSocket. It speaks through its speaker, shows expressions on its display and moves with a servo. Firmware is written in C with ESP-IDF.</p>
+        <small>Select any block in the diagram to see its role.</small>
+      </div>
+    </div>
+
+    <div class="points">
+      <div><h3>One memory, every device</h3><p>The robot and the phone app talk to the same backend, so something you tell one is known by the other.</p></div>
+      <div><h3>An agent with 12 tools</h3><p>Memory, lists, reminders, device control over MQTT, web search and image generation, chosen by the agent loop as the conversation needs them.</p></div>
+      <div><h3>Built for more than one user</h3><p>Speaker verification, a personality per user, and multi-tenant data isolation on MongoDB.</p></div>
+    </div>
+
+    <div class="slot">Robot photos and a demo video go here.</div>
+    <p style="margin-top:26px"><a class="link-light" href="https://github.com/AlsultanNabeel/sandy-backend">Read the backend code on GitHub</a></p>
+  </div>
+</section>
+
+<section class="wisal" id="wisal">
+  <div class="wrap">
+    <h2>Wisal: aid management for Gaza's charities.</h2>
+    <div class="grid">
+      <div>
+        <p class="body">A unified platform for registering aid beneficiaries and distributing aid through charitable organizations. It was our graduation project, built by a team of four.</p>
+        <div class="role"><b>My role: frontend developer</b>I built the responsive React.js interface, connected it to the REST API, and designed the dashboard organizations use to manage beneficiaries and track aid.</div>
+        <p class="body">The backend runs on Nest.js and PostgreSQL, with an Android app alongside the web platform. Matching between aid and beneficiaries is rule-based.</p>
+        <div class="tags"><span class="tag">React.js</span><span class="tag">REST API</span><span class="tag">Nest.js</span><span class="tag">PostgreSQL</span><span class="tag">Team of 4</span></div>
+      </div>
+      <div>
+        <div class="mock" aria-hidden="true">
+          <div class="mock-bar"><i></i><i></i><i></i></div>
+          <div class="mock-body">
+            <div class="mock-side"><b></b><b></b><b></b><b></b></div>
+            <div class="mock-main"><span></span><span></span><span></span><span class="w"></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="mock-note">Placeholder layout. Real dashboard screenshots go here.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stack" id="stack">
+  <div class="wrap">
+    <h2>One person across the whole stack.</h2>
+    <div class="cols">
+      <div><h3>Web</h3><ul><li>React.js</li><li>JavaScript</li><li>Node.js</li><li>REST APIs</li></ul></div>
+      <div><h3>Backend and data</h3><ul><li>Python, Flask</li><li>PostgreSQL, SQL</li><li>MongoDB</li><li>Java</li></ul></div>
+      <div><h3>Embedded and IoT</h3><ul><li>ESP32, ESP-IDF</li><li>Embedded systems</li><li>MQTT</li><li>Cloud-connected devices</li></ul></div>
+      <div><h3>Also</h3><ul><li>Git</li><li>Machine learning basics</li><li>SEO</li><li>Digital marketing</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="path">
+  <div class="wrap">
+    <h2>Where I've worked and studied.</h2>
+    <div class="rail">
+      <div class="step"><time>2025 – present</time><h3>Freelance full-stack and embedded systems developer</h3><p>Web applications end to end with React.js and Node.js, and IoT systems on ESP32 connected to cloud backends, from requirements to deployment.</p></div>
+      <div class="step"><time>Jul – Oct 2025</time><h3>Digital marketing intern, Palestine Brand (remote)</h3><p>Grew the Instagram following by 15% through content planning and consistent posting, and optimised product descriptions to reach top-5 Google ranking for 5 target keywords.</p></div>
+      <div class="step"><time>2020 – 2026</time><h3>B.Sc. Information Technology, Islamic University of Gaza</h3><p>Graduated with a Very Good grade (85.27/100).</p></div>
+      <div class="step"><time>2021 – 2022</time><h3>Customer service representative, Bianco Beach Resort, Egypt</h3><p>Guest reception and support for an international clientele.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have a website, automation or device in mind? Tell me what it should do.</h2>
+    <p class="sub">I take freelance projects: websites and landing pages, Python automation, and ESP32 or IoT prototypes.</p>
+    <div class="cta">
+      <a class="btn fill" href="mailto:ohnabeel@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/AlsultanNabeel">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Nabeel Alsultan</div></footer>
+
+<script>
+(function(){
+  var svg=document.getElementById('face');
+  var eyes=[document.getElementById('eyeL'),document.getElementById('eyeR')];
+  var mouth=document.getElementById('mouth');
+  var pupils=svg.querySelectorAll('.pupil');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function look(x,y){
+    var r=svg.getBoundingClientRect();
+    var cx=r.left+r.width/2, cy=r.top+r.height*0.45;
+    var dx=x-cx, dy=y-cy, d=Math.hypot(dx,dy)||1, m=Math.min(14,d/18);
+    var px=dx/d*m, py=dy/d*m;
+    pupils.forEach(function(p){p.setAttribute('transform','translate('+px+' '+py+')');});
+    mouth.setAttribute('d','M150 238 Q190 '+(256+Math.max(-6,Math.min(10,dy/60)))+' 230 238');
+  }
+  if(!reduce){
+    window.addEventListener('pointermove',function(e){look(e.clientX,e.clientY);},{passive:true});
+    setInterval(function(){
+      eyes.forEach(function(g){g.setAttribute('transform',g.getAttribute('transform').replace(/ scale.*/,'')+' scale(1 .08)');});
+      setTimeout(function(){eyes.forEach(function(g){g.setAttribute('transform',g.getAttribute('transform').replace(/ scale.*/,''));});},130);
+    },3600);
+  }
+  var data={
+    robot:['ESP32-S3 robot','The body. It listens through a microphone and streams live audio to the backend over an authenticated WebSocket. It speaks through its speaker, shows expressions on its display and moves with a servo. Firmware is written in C with ESP-IDF.'],
+    app:['iPhone app (SwiftUI)','The same assistant in your pocket. It uses the same backend and the same memory as the robot, so a reminder set on the phone is known to the robot.'],
+    backend:['Flask backend and agent loop','The brain. A Python/Flask service hosted on Heroku that authenticates devices, keeps per-user context, and runs an agent loop with 12 tools: memory, lists, reminders, device control over MQTT, web search and image generation.'],
+    gemini:['Gemini Live','Handles the real-time voice conversation. Audio from the robot is streamed through the backend to Gemini Live and the spoken reply is streamed back.'],
+    azure:['Azure OpenAI','Used for reasoning and text work behind the tools, alongside Gemini for voice.'],
+    mongo:['MongoDB and MQTT','MongoDB stores memory and user data with multi-tenant isolation, so each user only sees their own. MQTT carries commands from the backend to physical devices.']
+  };
+  var nodes=document.querySelectorAll('.node');
+  function pick(n){
+    nodes.forEach(function(x){x.classList.remove('on');});
+    n.classList.add('on');
+    var d=data[n.getAttribute('data-k')];
+    document.getElementById('d-title').textContent=d[0];
+    document.getElementById('d-text').textContent=d[1];
+  }
+  nodes.forEach(function(n){
+    n.addEventListener('click',function(){pick(n);});
+    n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(n);}});
+  });
+})();
+</script>
+</body>
+</html>
