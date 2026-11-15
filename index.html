@@ -644,6 +644,7 @@ html:lang(ar) :is(h1,h2){line-height:1.3;letter-spacing:0}
   const paused = () => root.hasAttribute('data-motion-paused');
   const setPaused = (p) => {
     root.toggleAttribute('data-motion-paused', p);
+    if (p) document.querySelectorAll('#face .pupil').forEach((el) => el.removeAttribute('transform'));
     toggles.forEach((b) => { b.textContent = T[lang][p ? 'play' : 'pause']; });
   };
   const syncToggles = () => toggles.forEach((b) => { b.hidden = !motionOK.matches; });
@@ -658,6 +659,7 @@ html:lang(ar) :is(h1,h2){line-height:1.3;letter-spacing:0}
   let pointer = null, frame = 0, mood = 'happy';
   const look = () => {
     frame = 0;
+    if (paused()) return; // "Pause animation" also stops the eyes following the pointer
     const r = face.getBoundingClientRect();
     const dx = pointer.x - (r.left + r.width / 2), dy = pointer.y - (r.top + r.height * 0.45);
     const d = Math.hypot(dx, dy) || 1, m = Math.min(14, d / 18);
