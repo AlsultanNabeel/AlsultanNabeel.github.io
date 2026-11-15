@@ -164,14 +164,14 @@ a{color:inherit}
 .hero::before{content:"";position:absolute;z-index:-1;inline-size:min(720px,90%);aspect-ratio:1;inset-inline-end:-10%;inset-block-start:-20%;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 30%,transparent),color-mix(in srgb,var(--accent2) 16%,transparent) 45%,transparent 70%);filter:blur(40px);pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
 .hero-text{grid-column:1;grid-row:1}
-.term{display:inline-flex;align-items:center;gap:10px;max-inline-size:100%;margin-block-end:20px;padding:6px 12px;border:1px solid var(--line2);border-radius:8px;background:color-mix(in srgb,var(--surface) 75%,transparent);font:400 .82rem/1.4 "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--mut);direction:ltr}
+.term{display:inline-flex;align-items:center;gap:10px;max-inline-size:100%;margin-block-end:20px;padding:6px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--surface);font:400 .82rem/1.4 "JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--mut);direction:ltr}
 .term .p{color:var(--accent)}
 .term .typed{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;inline-size:22ch;color:var(--fg)}
 .term .caret{display:inline-block;inline-size:.6ch;block-size:1.1em;background:var(--accent)}
 h1{font-size:clamp(2.4rem,1.2rem + 4.4vw,4.4rem);line-height:1.04;letter-spacing:-.03em;font-weight:700;font-variation-settings:"opsz" 96}
 .lead{margin-block-start:22px;max-inline-size:520px;color:var(--mut);font-size:1.12rem}
 .cta{margin-block-start:32px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;min-block-size:max(var(--target),48px);padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;border:1.5px solid var(--line2);color:var(--fg);transition:translate .15s,box-shadow .2s,border-color .2s}
+.btn{display:inline-flex;align-items:center;min-block-size:max(var(--target),48px);padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;border:1.5px solid var(--line2);background:var(--bg);color:var(--fg);transition:translate .15s,box-shadow .2s,border-color .2s}
 .btn:hover{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 16%,transparent),0 10px 30px -10px color-mix(in srgb,var(--accent) 60%,transparent)}
 @media (hover:hover) and (prefers-reduced-motion:no-preference){ .btn:hover{translate:0 -2px} }
 .btn.fill{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
@@ -186,8 +186,8 @@ h1{font-size:clamp(2.4rem,1.2rem + 4.4vw,4.4rem);line-height:1.04;letter-spacing
 #mouth{stroke:var(--accent);filter:drop-shadow(0 0 6px color-mix(in srgb,var(--accent) 70%,transparent))}
 .robot-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 12px}
 .robot-cap{font-size:.85rem;color:var(--mut);text-align:center}
-.pcb-bg{position:absolute;inset:0;z-index:-1;inline-size:100%;block-size:100%;pointer-events:none}
-.pcb-bg .traces{fill:none;stroke:var(--line2);stroke-width:2;opacity:.7}
+.pcb-bg{position:absolute;inset:0;z-index:-1;inline-size:100%;block-size:100%;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,#000 0,transparent 22%,transparent 78%,#000 100%);mask-image:linear-gradient(90deg,#000 0,transparent 22%,transparent 78%,#000 100%)}
+.pcb-bg .traces{fill:none;stroke:var(--line2);stroke-width:2;opacity:.6}
 .pcb-bg .pads{fill:var(--bg);stroke:var(--line2);stroke-width:2}
 .pcb-bg .pulse{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:40 1400;stroke-dashoffset:40;opacity:0;filter:drop-shadow(0 0 4px var(--accent))}
 .lid{transform-box:fill-box;transform-origin:center}
@@ -210,7 +210,7 @@ h1{font-size:clamp(2.4rem,1.2rem + 4.4vw,4.4rem);line-height:1.04;letter-spacing
 }
 
 /* pause control for the looping animations (WCAG 2.2.2) */
-.motion-toggle{display:inline-flex;align-items:center;min-block-size:var(--target);padding-inline:10px;border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:.8rem;cursor:pointer;opacity:.85}
+.motion-toggle{display:inline-flex;align-items:center;min-block-size:var(--target);padding-inline:10px;border:1px solid currentColor;border-radius:999px;background:var(--bg);color:inherit;font:inherit;font-size:.8rem;cursor:pointer;opacity:.85}
 .motion-toggle:hover{opacity:1}
 .robot .motion-toggle{color:var(--mut)}
 html[data-motion-paused] :is(.lid,.flow,.ticker-track,.pulse,.avail i,.caret){animation:none}
