@@ -33,7 +33,7 @@ and switch twitter:card below to summary_large_image. -->
   "jobTitle": "Full-Stack & Embedded Systems Developer",
   "description": "Full-stack and embedded systems developer. React, Node.js, ESP32, IoT. Available for freelance projects.",
   "email": "mailto:ohnabeel@gmail.com",
-  "sameAs": ["https://github.com/AlsultanNabeel"],
+  "sameAs": ["https://github.com/AlsultanNabeel", "https://www.linkedin.com/in/nabeel-alsultan/"],
   "alumniOf": {"@type": "CollegeOrUniversity", "name": "Islamic University of Gaza"},
   "homeLocation": {"@type": "Country", "name": "Egypt"},
   "knowsAbout": ["React.js", "JavaScript", "Node.js", "REST APIs", "Python", "Flask", "PostgreSQL", "MongoDB", "Java", "ESP32", "ESP-IDF", "Embedded systems", "MQTT", "IoT"]
@@ -164,6 +164,9 @@ h1{font-size:clamp(2.4rem,1.2rem + 4.4vw,4.4rem);line-height:1.04;letter-spacing
 .robot .motion-toggle{color:var(--mut)}
 html[data-motion-paused] :is(.lid,.flow,.ticker-track){animation:none}
 
+.intro{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-block-end:18px;font-size:1.05rem}
+.avail{display:inline-flex;align-items:center;gap:8px;color:var(--mut);font-size:.95rem}
+.avail i{inline-size:9px;block-size:9px;border-radius:50%;background:#2E8B57}
 /* sections */
 section{padding-block:84px}
 h2{font-size:clamp(1.8rem,1.1rem + 2.4vw,2.6rem);line-height:1.1;letter-spacing:-.02em;font-weight:700;max-inline-size:640px}
@@ -293,6 +296,7 @@ html:lang(ar) :is(h1,h2){line-height:1.3;letter-spacing:0}
 @media (width <= 860px){
   .hero .wrap,.sandy-top,.arch,.wisal .grid{grid-template-columns:1fr}
   .hero-text,.robot{grid-column:auto;grid-row:auto}
+  .hero-text{order:-1}
   .robot svg{inline-size:min(300px,78%)}
   .badges{justify-content:flex-start}
   section{padding-block:64px}
@@ -366,10 +370,11 @@ html:lang(ar) :is(h1,h2){line-height:1.3;letter-spacing:0}
       <p class="chip-note">Preset answers. The real Sandy runs on Gemini Live.</p>
     </div>
     <div class="hero-text">
+      <p class="intro"><b>Nabeel Alsultan</b><span class="avail"><i aria-hidden="true"></i>Available for freelance projects</span></p>
       <h1>I build web apps and smart devices, from the screen to the circuit board.</h1>
       <p class="lead">Full-stack and embedded systems developer. I take an idea from a React interface through the backend to firmware running on an ESP32, and ship it working.</p>
       <div class="cta">
-        <a class="btn fill" href="#sandy">See Sandy, my robot</a>
+        <a class="btn fill" href="#sandy">See my projects</a>
         <a class="btn" href="#contact">Start a project</a>
       </div>
       <div class="facts">
@@ -501,6 +506,7 @@ html:lang(ar) :is(h1,h2){line-height:1.3;letter-spacing:0}
     <div class="cta">
       <a class="btn fill" href="mailto:ohnabeel@gmail.com">Email me</a>
       <a class="btn" href="https://wa.me/972597062827" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://www.linkedin.com/in/nabeel-alsultan/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/AlsultanNabeel" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
@@ -734,7 +740,7 @@ html:lang(ar) :is(h1,h2){line-height:1.3;letter-spacing:0}
     'Preset answers. The real Sandy runs on Gemini Live.':'إجابات جاهزة. ساندي الحقيقية تعمل بـ Gemini Live.',
     'I build web apps and smart devices, from the screen to the circuit board.':'تطبيقات ويب وأجهزة ذكية، من الشاشة إلى الدارة الإلكترونية.',
     'Full-stack and embedded systems developer. I take an idea from a React interface through the backend to firmware running on an ESP32, and ship it working.':'مطوّر Full-Stack وأنظمة مدمجة. آخذ الفكرة من واجهة React مروراً بالـ Backend وصولاً إلى برمجيات تعمل على ESP32، وأسلّمها شغّالة.',
-    'See Sandy, my robot':'شاهد ساندي، الروبوت','Start a project':'ابدأ مشروعاً',
+    'See my projects':'شاهد مشاريعي','Nabeel Alsultan':'نبيل السلطان','Available for freelance projects':'متاح لمشاريع حرة','LinkedIn':'لينكد إن','Start a project':'ابدأ مشروعاً',
     'B.Sc. Information Technology':'بكالوريوس تكنولوجيا المعلومات','Islamic University of Gaza, 2026':'الجامعة الإسلامية بغزة، 2026',
     'Based in Egypt':'مقيم في مصر','Working remotely':'أعمل عن بعد',
     'Sandy: a voice assistant you can put on a desk.':'ساندي: مساعد صوتي تضعه على مكتبك.',
